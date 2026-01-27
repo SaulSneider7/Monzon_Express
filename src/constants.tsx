@@ -117,11 +117,15 @@ export const ROUTES_DATA: Route[] = [
 ];
 
 export const PASSENGER_PRICES: PassengerPrice[] = [
-  { from: "Monzón", to: "Lima (Remisse)", price: 150.00 },
-  { from: "Tingo María", to: "Lima (Auto)", price: 120.00 },
-  { from: "Huánuco", to: "Monzón", price: 50.00 },
-  { from: "Monzón", to: "Tocache", price: 70.00 },
-  { from: "Monzón", to: "Huaraz", price: 90.00 },
+  { from: "Tingo María", to: "Tocache", price: 40.00 },
+  { from: "Tingo María", to: "Uchiza", price: 35.00 },
+  { from: "Tingo María", to: "Progreso", price: 30.00 },
+  { from: "Tingo María", to: "Yanajanca", price: 30.00 },
+  { from: "Tingo María", to: "Aucayacu", price: 15.00 },
+  { from: "Monzón", to: "Jircan", price: 60.00 },
+  { from: "Monzón", to: "Llata", price: 90.00, offer: 85.00 },
+  { from: "Monzón", to: "Huánuco", price: 50.00, offer: 45.00 },
+  { from: "Monzón", to: "Tingo María", price: 20.00, offer: 18.00 }
 ];
 
 export const PARCEL_INFO = {
