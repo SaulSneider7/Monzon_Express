@@ -31,10 +31,6 @@ const ServiceCard: React.FC<Props> = ({ service }) => {
         {service.description}
       </p>
       
-      <div className="mt-8 flex items-center gap-2 text-[#0E6BA8] font-bold group-hover:gap-4 transition-all">
-        <span>Saber más</span>
-        <i className="fa-solid fa-chevron-right text-xs"></i>
-      </div>
     </div>
   );
 };
