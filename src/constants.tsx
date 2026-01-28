@@ -5,9 +5,11 @@ export const COMPANY_INFO = {
   commercialName: "Monzón Express",
   legalName: "EMPRESA DE TRANSPORTES MONZÓN EXPRESS Y SERVICIOS MÚLTIPLES SAC",
   ruc: "20489491266",
-  phone: "+51 951 348 262",
-  whatsapp: "51951348262",
-  address: "Jr. General Prado Nro. 1024, Huánuco",
+  phone: "062-614336",
+  mobile: "993597246",
+  whatsapp: "51993597246",
+  email: "monzonexpressac@gmail.com",
+  address: "Av. Enrique Pimentel 188, Tingo María",
   hours: "Lun - Dom: 06:00 AM - 09:00 PM",
   developerUrl: "https://tu-sitioweb.com"
 };

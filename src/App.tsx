@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import ServiceCard from './components/ServiceCard';
 import RouteList from './components/RouteList';
 import PricingSection from './components/PricingSection';
+import ContactSection from './components/ContactSection';
 import { SERVICES_DATA, COMPANY_INFO, MANAGEMENT_TEAM, BRANCHES_DATA } from './constants';
 
 const App: React.FC = () => {
@@ -147,7 +148,7 @@ const App: React.FC = () => {
 
         <PricingSection />
 
-        {/* Branches Section (New) */}
+        {/* Branches Section */}
         <section id="sedes" className="py-24 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -174,6 +175,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Contact Section (NEW) */}
+        <ContactSection />
 
         {/* Management Board Section */}
         <section id="directorio" className="py-24 bg-[#2E2E2E] text-white">
@@ -204,7 +208,7 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src="./nosotros.webp"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
                   alt="Equipo Directivo"
                   className="rounded-3xl shadow-xl h-[450px] w-full object-cover"
                 />
@@ -232,29 +236,10 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Contact Info (Quick Access) */}
-        <section id="contacto" className="py-16 bg-[#F2B705] text-[#2E2E2E]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl font-black uppercase italic leading-tight">¿Deseas pertenecer a <br />nuestra empresa?</h2>
-              <p className="font-bold mt-2">Contáctanos directamente con nuestro directorio.</p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={`https://wa.me/${COMPANY_INFO.whatsapp}`} className="bg-[#2E2E2E] text-white px-8 py-4 rounded-2xl font-black uppercase italic hover:scale-105 transition-transform flex items-center gap-3">
-                Enviar WhatsApp <i className="fa-brands fa-whatsapp"></i>
-              </a>
-              <a href={`tel:${COMPANY_INFO.phone}`} className="bg-white text-[#2E2E2E] px-8 py-4 rounded-2xl font-black uppercase italic hover:scale-105 transition-transform flex items-center gap-3 border-2 border-[#2E2E2E]">
-                Llamar Central <i className="fa-solid fa-phone"></i>
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="bg-white border-t border-slate-100 pt-20 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* Logo institucional horizontal */}
           <div className="flex justify-center mb-16">
             <img
@@ -265,12 +250,12 @@ const App: React.FC = () => {
             />
           </div>
 
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
-              <p className="text-slate-500 font-medium leading-relaxed mb-6">
-                Especialistas en transporte corporativo y alquiler de vehículos a nivel nacional. Conectamos Monzón, Huánuco, Ancash y Lima.
+              <p className="text-slate-500 font-medium leading-relaxed mb-4">
+                {COMPANY_INFO.legalName}
               </p>
+              <p className="text-slate-400 font-bold text-xs uppercase mb-6">RUC: {COMPANY_INFO.ruc}</p>
               <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 hover:text-[#0E6BA8] transition-all border border-slate-100"><i className="fa-brands fa-facebook-f"></i></a>
                 <a href="#" className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 hover:text-[#C62828] transition-all border border-slate-100"><i className="fa-brands fa-instagram"></i></a>
@@ -299,15 +284,19 @@ const App: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="text-[#2E2E2E] font-black uppercase italic mb-6 tracking-tight">Sedes</h4>
-              <div className="space-y-6">
+              <h4 className="text-[#2E2E2E] font-black uppercase italic mb-6 tracking-tight">Contacto Principal</h4>
+              <div className="space-y-4">
                 <div className="flex gap-4 items-start">
-                  <i className="fa-solid fa-map-location-dot text-[#0E6BA8] mt-1"></i>
+                  <i className="fa-solid fa-map-location-dot text-[#0E6BA8] mt-1 shrink-0"></i>
                   <p className="text-slate-500 font-bold text-sm leading-relaxed">{COMPANY_INFO.address}</p>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <i className="fa-solid fa-phone-volume text-[#C62828] mt-1"></i>
-                  <p className="text-slate-500 font-bold text-sm">{COMPANY_INFO.phone}</p>
+                  <i className="fa-solid fa-phone-volume text-[#C62828] mt-1 shrink-0"></i>
+                  <p className="text-slate-500 font-bold text-sm">{COMPANY_INFO.phone} - {COMPANY_INFO.mobile}</p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <i className="fa-solid fa-envelope text-[#F2B705] mt-1 shrink-0"></i>
+                  <p className="text-slate-500 font-bold text-sm lowercase">{COMPANY_INFO.email}</p>
                 </div>
               </div>
             </div>
