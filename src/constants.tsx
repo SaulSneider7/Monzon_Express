@@ -11,7 +11,8 @@ export const COMPANY_INFO = {
   email: "monzonexpressac@gmail.com",
   address: "Av. Enrique Pimentel 188, Tingo María",
   hours: "Lun - Dom: 06:00 AM - 09:00 PM",
-  developerUrl: "https://tu-sitioweb.com"
+  developerUrl: "https://tu-sitioweb.com",
+  ticketingPhones: ["993597246", "951348262"]
 };
 
 export const BRANCHES_DATA = [
@@ -64,7 +65,7 @@ export const SERVICES_DATA: Service[] = [
   {
     title: "Transporte Corporativo",
     description: "Servicio especializado para personal de empresas a nivel nacional en unidades modernas (Autos y Remisse).",
-    icon: "fa-user-tie",
+    icon: "fa-user-suit",
     categoryColor: "#2E2E2E"
   },
   {
@@ -90,31 +91,52 @@ export const SERVICES_DATA: Service[] = [
 export const ROUTES_DATA: Route[] = [
   {
     id: 1,
-    name: "Monzón - Lima / Tingo María - Lima",
-    stops: ["Monzón / Tingo María", "Huánuco", "Pasco", "Lima"],
-    description: "Servicio Premium en Autos y Remisse conectando con la capital.",
-    icon: "fa-car-side"
+    name: "Ruta 1: Llata - Monzón",
+    stops: ["Llata", "Jacas Grande", "Caruapata", "Quivilla", "Quipran", "Chavín de Parearca", "Tantamayo", "Punchao", "Singa", "Miraflores", "Monzón"],
+    description: "Conexión integral entre la sierra alta de Huamalíes y el Valle del Monzón.",
+    icon: "fa-mountain"
   },
   {
     id: 2,
-    name: "Ruta Huánuco - Monzón",
+    name: "Ruta 2: Conexión Huánuco",
     stops: ["Huánuco", "Tingo María", "Monzón"],
-    description: "Conexión principal entre la capital regional y el valle.",
+    description: "Nuestra ruta principal conectando la capital regional con el corazón del valle.",
     icon: "fa-route"
   },
   {
     id: 3,
-    name: "Eje Selva San Martín",
-    stops: ["Monzón", "Aucayacu", "Uchiza", "Tocache", "Tarapoto"],
-    description: "Corredor vital para el comercio con la selva norte.",
+    name: "Ruta 3: Eje Monzón - Chapacra",
+    stops: ["Tingo María", "Cachicoto", "Monzón", "Chipaquillo", "Caunarapa", "Maravillas", "Chipaco", "Chapacra"],
+    description: "Cobertura completa de los centros poblados y comunidades del alto Monzón.",
     icon: "fa-tree"
   },
   {
     id: 4,
-    name: "Circuito de Altura Huánuco - Ancash",
-    stops: ["Llata", "Chavín de Huántar", "Huaraz"],
-    description: "Ruta histórica que une la sierra de Huánuco con el Callejón de Huaylas.",
-    icon: "fa-mountain"
+    name: "Ruta 4: Marañón - Monzón",
+    stops: ["Huacaybamba", "Cochabamba", "Arancay", "Jircan", "Urpish", "Monzón"],
+    description: "Servicio vital para las provincias del Marañón hacia el valle.",
+    icon: "fa-road"
+  },
+  {
+    id: 5,
+    name: "Ruta 5: Selva Central",
+    stops: ["Monzón", "Tingo María", "Aucayacu", "Milano", "La Morada", "Yanajanca"],
+    description: "Corredor logístico y de pasajeros hacia el norte de Leoncio Prado.",
+    icon: "fa-truck-pickup"
+  },
+  {
+    id: 6,
+    name: "Ruta 6: Destino Capital",
+    stops: ["Monzón - Lima", "Tingo María - Lima"],
+    description: "Viajes directos a la ciudad de Lima en unidades confortables.",
+    icon: "fa-city"
+  },
+  {
+    id: 8,
+    name: "Ruta 8: Conexión Amazonía",
+    stops: ["Palcazu", "Pucallpa", "Progreso", "Tocache", "Juanjui", "Tarapoto"],
+    description: "Salidas desde Monzón hacia los principales destinos de la selva peruana.",
+    icon: "fa-water"
   }
 ];
 
@@ -124,14 +146,13 @@ export const PASSENGER_PRICES: PassengerPrice[] = [
   { from: "Tingo María", to: "Progreso", price: 30.00 },
   { from: "Tingo María", to: "Yanajanca", price: 30.00 },
   { from: "Tingo María", to: "Aucayacu", price: 15.00 },
-  { from: "Monzón", to: "Jircan", price: 60.00 },
-  { from: "Monzón", to: "Llata", price: 90.00, offer: 85.00 },
+  { from: "Monzón", to: "Jircan", price: 60.00, offer: 55.00 },
+  { from: "Monzón", to: "Llata", price: 90.00, offer: 55.00 },
   { from: "Monzón", to: "Huánuco", price: 50.00, offer: 45.00 },
-  { from: "Monzón", to: "Tingo María", price: 20.00, offer: 18.00 }
 ];
 
 export const PARCEL_INFO = {
   basePrice: 5.00,
-  items: ["Sobres", "Cajas", "Mercancías", "Equipos"],
-  note: "Tarifas especiales para envíos corporativos frecuentes."
+  items: ["Sobres", "Cajas", "Galones", "Costales", "Otros"],
+  note: "Se cobrará por volumen, peso y fragilidad."
 };

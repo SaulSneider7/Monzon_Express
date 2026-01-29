@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import VehicleShowcase from './components/VehicleShowcase';
 import ServiceCard from './components/ServiceCard';
 import RouteList from './components/RouteList';
 import PricingSection from './components/PricingSection';
@@ -15,6 +16,9 @@ const App: React.FC = () => {
 
       <main>
         <Hero />
+
+        {/* NEW: Logo and Infinite Vehicle Carrousel */}
+        <VehicleShowcase />
 
         {/* Regions Showcase */}
         <section className="py-24 bg-white overflow-hidden">
@@ -208,7 +212,7 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
+                  src="./CEO.webp"
                   alt="Equipo Directivo"
                   className="rounded-3xl shadow-xl h-[450px] w-full object-cover"
                 />
