@@ -7,7 +7,7 @@ import ServiceCard from './components/ServiceCard';
 import RouteList from './components/RouteList';
 import PricingSection from './components/PricingSection';
 import ContactSection from './components/ContactSection';
-import { SERVICES_DATA, COMPANY_INFO, MANAGEMENT_TEAM, BRANCHES_DATA } from './constants';
+import { SERVICES_DATA, COMPANY_INFO, BRANCHES_DATA } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -183,28 +183,6 @@ const App: React.FC = () => {
         {/* Contact Section (NEW) */}
         <ContactSection />
 
-        {/* Management Board Section */}
-        <section id="directorio" className="py-24 bg-[#2E2E2E] text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="text-[#F2B705] font-black tracking-widest uppercase text-sm block mb-2">Liderazgo y Confianza</span>
-              <h2 className="text-4xl font-black uppercase italic">Directorio <span className="text-[#0E6BA8]">Ejecutivo</span></h2>
-              <p className="mt-4 text-slate-400 font-bold">Nuestros directivos están a su disposición para consultas, reclamos o solicitudes de membresía.</p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {MANAGEMENT_TEAM.map((member, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-[#0E6BA8] transition-all group">
-                  <div className="w-16 h-16 bg-[#F2B705] rounded-2xl flex items-center justify-center text-[#2E2E2E] mb-6 text-2xl group-hover:scale-110 transition-transform">
-                    <i className={`fa-solid ${member.icon}`}></i>
-                  </div>
-                  <h4 className="text-xl font-black uppercase italic mb-2 leading-tight">{member.name}</h4>
-                  <p className="text-[#F2B705] font-black text-xs uppercase tracking-widest group-hover:text-white">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* About Us */}
         <section id="nosotros" className="py-24 bg-white">
