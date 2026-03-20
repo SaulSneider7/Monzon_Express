@@ -8,6 +8,8 @@ const Navbar: React.FC = () => {
     const navLinks = [
         { name: "Inicio", href: "#inicio" },
         { name: "Servicios", href: "#servicios" },
+        { name: "Autopartes", href: "#autopartes" },
+        { name: "Grifo", href: "#grifo" },
         { name: "Rutas", href: "#rutas" },
         { name: "Tarifas", href: "#tarifas" },
         { name: "Sedes", href: "#sedes" },
@@ -48,7 +50,7 @@ const Navbar: React.FC = () => {
 
                     <div className="flex items-center gap-2 sm:gap-4 shrink-0">
                         <a
-                            href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+                            href={`tel:${COMPANY_INFO.mobile}`}
                             className="hidden xl:flex items-center gap-2 text-[#0E6BA8] font-black hover:scale-105 transition-transform uppercase text-sm"
                         >
                             <i className="fa-solid fa-phone"></i>
@@ -90,7 +92,7 @@ const Navbar: React.FC = () => {
                             </a>
                         ))}
                         <a
-                            href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+                            href={`tel:${COMPANY_INFO.mobile}`}
                             className="flex items-center justify-center gap-2 text-[#0E6BA8] font-black border-2 border-[#0E6BA8] py-4 rounded-2xl uppercase italic"
                         >
                             <i className="fa-solid fa-phone"></i>

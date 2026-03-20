@@ -65,7 +65,7 @@ export const SERVICES_DATA: Service[] = [
   {
     title: "Transporte Corporativo",
     description: "Servicio especializado para personal de empresas a nivel nacional en unidades modernas (Autos y Remisse).",
-    icon: "fa-user-suit",
+    icon: "fa-user-tie",
     categoryColor: "#2E2E2E"
   },
   {
@@ -155,4 +155,49 @@ export const PARCEL_INFO = {
   basePrice: 5.00,
   items: ["Sobres", "Cajas", "Galones", "Costales", "Otros"],
   note: "Se cobrará por volumen, peso y fragilidad."
+};
+
+export const AUTOPARTS_DATA = {
+  brands: [
+    { name: "Toyota", logo: "/toyota-logo.png" },
+    { name: "Hyundai", logo: "/hyundai-logo.png" },
+    { name: "Suzuki", logo: "/suzuki-logo.png" },
+    { name: "Chevrolet", logo: "/chevrolet-logo.png" },
+    { name: "KIA", logo: "/kia-logo.png" },
+    { name: "Volkswagen", logo: "/volkswagen-logo.png" },
+    { name: "Changan", logo: "/changan-logo.png" },
+    { name: "Marcas Chinas", logo: "/foton-logo.png" }
+  ],
+  parts: [
+    { name: "Suspensiones", image: "/suspeciones.jpg" },
+    { name: "Rodajes", image: "/rodajes.webp" },
+    { name: "Embragues", image: "/embrague.jpg" },
+    { name: "Filtros", image: "/filtro.jpg" },
+    { name: "Bujías", image: "/bujias.webp" },
+    { name: "Bobinas", image: "/bobinas.jpg" },
+    { name: "Resortes", image: "/resortes.png" }
+  ]
+};
+
+export const GAS_STATION_DATA = {
+  fuels: [
+    {
+      name: "Combustible Regular",
+      octane: "89 - 94 Octanos",
+      description: "Ideal para motores convencionales y flota pesada.",
+      image: "/regular.png"
+    },
+    {
+      name: "Primera Calidad",
+      octane: "95 - 98 Octanos",
+      description: "Máximo rendimiento y limpieza para motores modernos.",
+      image: "/primera_calidad.png"
+    },
+    {
+      name: "Diesel Ultra Premium",
+      octane: "S-50 Bajo Azufre",
+      description: "Potencia y cuidado para motores Diesel de última generación.",
+      image: "/premium.jpeg"
+    }
+  ]
 };

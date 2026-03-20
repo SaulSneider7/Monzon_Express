@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
     {/* LOGO */}
     <div className="mb-6">
       <img
-        src="./logo-horizontal.png"
+        src="/monzon-express.jpeg"
         alt="Monzón Express - Servicios Múltiples"
         className="
           w-full

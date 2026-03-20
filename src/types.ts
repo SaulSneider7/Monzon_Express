@@ -24,3 +24,20 @@ export interface PassengerPrice {
   price: number;
   offer?: number;
 }
+
+export interface AutopartBrand {
+  name: string;
+  logo: string;
+}
+
+export interface AutopartItem {
+  name: string;
+  image: string;
+}
+
+export interface FuelType {
+  name: string;
+  octane: string;
+  description: string;
+  image: string;
+}

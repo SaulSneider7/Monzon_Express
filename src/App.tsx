@@ -7,7 +7,8 @@ import ServiceCard from './components/ServiceCard';
 import RouteList from './components/RouteList';
 import PricingSection from './components/PricingSection';
 import ContactSection from './components/ContactSection';
-import { SERVICES_DATA, COMPANY_INFO, BRANCHES_DATA } from './constants';
+import BusinessExpansion from './components/BusinessExpansion';
+import { SERVICES_DATA, COMPANY_INFO, MANAGEMENT_TEAM, BRANCHES_DATA } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -32,7 +33,7 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Huánuco */}
               <div className="group relative h-80 rounded-3xl overflow-hidden shadow-xl">
-                <img src="./huanuco.jpg" alt="Huánuco" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="/huanuco.jpg" alt="Huánuco" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <h4 className="text-2xl font-black uppercase italic">Huánuco</h4>
@@ -41,7 +42,7 @@ const App: React.FC = () => {
               </div>
               {/* Ancash */}
               <div className="group relative h-80 rounded-3xl overflow-hidden shadow-xl">
-                <img src="./ancash.webp" alt="Ancash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="/ancash.webp" alt="Ancash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <h4 className="text-2xl font-black uppercase italic">Ancash</h4>
@@ -50,7 +51,7 @@ const App: React.FC = () => {
               </div>
               {/* San Martin */}
               <div className="group relative h-80 rounded-3xl overflow-hidden shadow-xl">
-                <img src="./san_martin.webp" alt="San Martin" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="/san_martin.webp" alt="San Martin" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <h4 className="text-2xl font-black uppercase italic">San Martín</h4>
@@ -82,6 +83,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* New Business Expansion: Autoparts and Gas Station */}
+        <BusinessExpansion />
 
         {/* Vehicle Rental Section */}
         <section id="alquiler" className="py-24 bg-white relative overflow-hidden">
@@ -138,7 +142,7 @@ const App: React.FC = () => {
                   className="rounded-3xl shadow-lg h-64 w-full object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600"
+                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1000"
                   alt="Sedan Car"
                   className="rounded-3xl shadow-lg h-64 w-full object-cover col-span-2"
                 />
@@ -180,9 +184,31 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Section (NEW) */}
+        {/* Contact Section */}
         <ContactSection />
 
+        {/* Management Board Section */}
+        <section id="directorio" className="py-24 bg-[#2E2E2E] text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <span className="text-[#F2B705] font-black tracking-widest uppercase text-sm block mb-2">Liderazgo y Confianza</span>
+              <h2 className="text-4xl font-black uppercase italic">Directorio <span className="text-[#0E6BA8]">Ejecutivo</span></h2>
+              <p className="mt-4 text-slate-400 font-bold">Nuestros directivos están a su disposición para consultas, reclamos o solicitudes de membresía.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {MANAGEMENT_TEAM.map((member, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-[#0E6BA8] transition-all group">
+                  <div className="w-16 h-16 bg-[#F2B705] rounded-2xl flex items-center justify-center text-[#2E2E2E] mb-6 text-2xl group-hover:scale-110 transition-transform">
+                    <i className={`fa-solid ${member.icon}`}></i>
+                  </div>
+                  <h4 className="text-xl font-black uppercase italic mb-2 leading-tight">{member.name}</h4>
+                  <p className="text-[#F2B705] font-black text-xs uppercase tracking-widest group-hover:text-white">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* About Us */}
         <section id="nosotros" className="py-24 bg-white">
@@ -190,7 +216,7 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src="./CEO.webp"
+                  src="/CEO.webp"
                   alt="Equipo Directivo"
                   className="rounded-3xl shadow-xl h-[450px] w-full object-cover"
                 />
@@ -231,7 +257,6 @@ const App: React.FC = () => {
               loading="lazy"
             />
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
               <p className="text-slate-500 font-medium leading-relaxed mb-4">
@@ -249,9 +274,10 @@ const App: React.FC = () => {
               <h4 className="text-[#2E2E2E] font-black uppercase italic mb-6 tracking-tight">Menú Rápido</h4>
               <ul className="space-y-4">
                 <li><a href="#servicios" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Servicios Corporativos</a></li>
+                <li><a href="#autopartes" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Tienda de Autopartes</a></li>
+                <li><a href="#grifo" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Grifo Rural</a></li>
                 <li><a href="#alquiler" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Alquiler de Vehículos</a></li>
-                <li><a href="#rutas" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Rutas a Lima</a></li>
-                <li><a href="#sedes" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Nuestras Sedes</a></li>
+                <li><a href="#rutas" className="text-slate-500 hover:text-[#0E6BA8] font-bold transition-colors">Nuestras Rutas</a></li>
               </ul>
             </div>
 
