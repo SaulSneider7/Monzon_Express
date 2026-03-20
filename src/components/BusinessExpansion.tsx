@@ -74,6 +74,29 @@ const BusinessExpansion: React.FC = () => {
                         </p>
                     </div>
 
+                    {/* IMAGEN OBRA */}
+                    <div className="mb-16">
+                        <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+                            
+                            <img
+                            src="/obra_en_construccion.webp"
+                            alt="Grifo en construcción"
+                            className="w-full h-[300px] md:h-[400px] object-cover"
+                            />
+
+                            {/* Overlay oscuro */}
+                            <div className="absolute inset-0 bg-black/40"></div>
+
+                            {/* Texto opcional */}
+                            <div className="absolute top-4 left-4 md:top-6 md:left-6">
+                                <span className="bg-[#F2B705] text-[#2E2E2E] px-4 py-2 text-xs font-black uppercase tracking-widest rounded-lg">
+                                    Próxima apertura
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {GAS_STATION_DATA.fuels.map((fuel, idx) => (
                             <div key={idx} className="group bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden hover:bg-white/10 transition-all">
