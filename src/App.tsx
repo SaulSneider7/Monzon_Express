@@ -65,22 +65,45 @@ const App: React.FC = () => {
         {/* Services Section */}
         <section id="servicios" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
           <div className="max-w-7xl mx-auto">
+
+            {/* HEADER */}
             <div className="text-center mb-16">
-              <span className="text-[#C62828] font-black tracking-widest uppercase text-sm block mb-2">Servicios Integrales</span>
+              <span className="text-[#C62828] font-black tracking-widest uppercase text-sm block mb-2">
+                Servicios Integrales
+              </span>
+
               <h2 className="text-4xl md:text-5xl font-black text-[#2E2E2E] tracking-tighter uppercase italic">
                 Transporte de <span className="text-[#0E6BA8]">Personal y Logística</span>
               </h2>
+
               <div className="w-24 h-2 bg-[#F2B705] mx-auto mt-6"></div>
+
               <p className="mt-8 text-lg font-bold text-slate-600 max-w-2xl mx-auto">
                 Realizamos transporte corporativo especializado para empresas en todo el Perú y brindamos soluciones de movilidad versátiles para cada cliente.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {SERVICES_DATA.map((service, idx) => (
-                <ServiceCard key={idx} service={service} />
-              ))}
+            {/* CONTENIDO */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+              {/* IZQUIERDA: CARDS */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {SERVICES_DATA.map((service, idx) => (
+                  <ServiceCard key={idx} service={service} />
+                ))}
+              </div>
+
+              {/* DERECHA: IMAGEN */}
+              <div className="hidden lg:flex justify-center">
+                <img
+                  src="/transporte_pasajeros.webp"
+                  alt="Servicios"
+                  className="object-cover rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
             </div>
+
           </div>
         </section>
 
